@@ -1,4 +1,5 @@
 import sys
+import random
 
 def can_place(board, n, (row, col)):
     rng = range(2, row+1) #No need to check the immediate row above. 
@@ -10,7 +11,9 @@ def can_place(board, n, (row, col)):
     return True
 
 def place_queens(board, n, all_cols, row, good_columns, bad_columns):
-    for col in good_columns - bad_columns:
+    cols = list(good_columns - bad_columns)
+    random.shuffle(cols)
+    for col in cols:
         if can_place(board, n, (row, col)):
             board[row][col] = 1
             if row == n - 1:
