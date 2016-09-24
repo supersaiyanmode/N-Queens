@@ -1,1 +1,1 @@
-Place N-queens on NxN chess board. Finds valid configuration of up to 29x29 in under a minute.
+Place N-queens on NxN chess board. Finds valid configuration of up to 150x150 in under 3-4 seconds.
